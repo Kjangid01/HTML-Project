@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Rulaniya Honda</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script>
+function validate()
+	{
+		var valid=true;
+		
+		if(document.myform.txtdesc.value=="")
+		{
+			document.getElementById("sp5").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		
+		if(document.myform.txtperson.value=="")
+		{
+			document.getElementById("sp2").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		
+		if(document.myform.txtmobile.value=="")
+		{
+			document.getElementById("sp6").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		else
+		{
+			if(!isdigit(document.myform.txtmobile.value)|| document.myform.txtmobile.value.length!=10)
+			{	
+				alert("Please enter valid mobile number of 10 digits");
+			
+				valid=false;
+			}
+		}
+		
+		if(document.myform.txtemail.value=="")
+		{
+			document.getElementById("sp7").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		else
+		{
+			if(!echeck(document.myform.txtemail.value))
+			{	
+				alert("Please enter valid email id");
+				
+				valid=false;
+			}
+		}
+		
+		
+		
+		return valid;
+	}
+	
+	function validate2()
+	{
+		var valid=true;
+		if(document.myform1.name1.value=="")
+		{
+			document.getElementById("st1").innerHTML="<font color=red>*</font>";
+			
+				valid=false;		
+			
+		}
+		if(document.myform1.email1.value=="")
+		{
+			document.getElementById("st2").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		else
+		{
+			if(!echeck(document.myform1.email1.value))
+			{	
+				alert("Please enter valid email id");
+				
+				valid=false;
+			}
+		}
+		if(document.myform1.phone1.value=="")
+		{
+			document.getElementById("st3").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		else
+		{
+			if(!isdigit(document.myform1.phone1.value)|| document.myform1.phone1.value.length!=10)
+			{	
+				alert("Please enter valid mobile number of 10 digits");
+			
+				valid=false;
+			}
+		}
+		if(document.myform1.desc1.value=="")
+		{
+			document.getElementById("st4").innerHTML="<font color=red>*</font>";
+			
+				valid=false;
+		}
+		
+		
+		
+		
+		
+		return valid;
+	}
+	function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid E-mail ID")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Invalid E-mail ID")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid E-mail ID")
+		    return false
+		 }
+					
+ 		 return true					
+	}
+	function isdigit(str)
+	{
+		var n;
+		
+		n=str.length;
+		
+		var valid=true;
+		
+		var i;
+		
+		for(i=0;i<n;i++)
+		{
+			var val;
+			
+			val=str.charCodeAt(i);
+			
+			if(val>=48&&val<=57)
+				val=val;
+			else
+			{
+				valid=false;
+				
+				break;
+			}
+		}
+	
+			return valid;
+	}
+	
+	function checkdata(ob,sp)
+	{
+		if(ob.value!="")
+			document.getElementById(sp).innerHTML="";
+		else
+			document.getElementById(sp).innerHTML="<font color=red>*</font>";
+		
+			
+	}
+	
+</script>
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div id="container">
+  <div id="header">
+    <div id="logo"><a href="#"><img src="images/logo.png" width="240" height="105" alt="" /></a></div>
+  </div>
+  <div id="h_navcontainer">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>      <li><a href="service.html">Service Center</a></li>
+      <li><a href="2wheel.html">2 Wheelers</a></li>
+      <li><a href="upcoming.html">Upcoming Models</li>
+      <li><a href="feedback.html">FeedBack</li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div id="page_wrap">
+    <div id="page_top"></div>
+    <div id="page">
+      <h1 class="pagetitle">Service Center</h1>
+      <h2>Service</h2>
+  <table width="852" border="0" align="center" cellpadding="5" cellspacing="5" bgcolor="#F9F9F9">
+  <tbody><tr>
+    <td width="832" height="811" valign="top"><form name="0.1_contactform" method="get" action="http://indiacom.in/form/send_form_email.php" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);">
+	<table width="809" align="center" cellpadding="2" cellspacing="0">
+	  <tbody><tr>
+	    <td height="31" colspan="3" valign="middle"><div align="center"><strong><img src="images/logo.png" ><br>
+	      <br>
+	      ONLINE SERVICE BOOKING</strong><br>
+	      <br>
+	    </div></td>
+	    </tr>
+	  
+	  <tr>
+	    <td width="13" valign="middle" bgcolor="#F3F3F3"> </td>
+	    <td width="350" valign="middle" bgcolor="#F3F3F3"><span>
+          <label>Booking Date</label>
+	    </span></td>
+	  <td width="432" valign="top" bgcolor="#F3F3F3">
+		<input type="date" name="name" maxlength="50" size="30" title=" Fields marked with (*) are mandatory ">	 </td>
+	</tr>
+	<tr>
+	  <td valign="middle"> </td>
+	  <td valign="middle"><span>
+        <label>Model</label>
+      </span></td>
+	  <td valign="top">
+		
+		<select name="email">
+          <option value=""></option>
+          <option value="Activa">Activa</option>
+          <option value="Activa125">Activa125</option>
+          <option value="ActivaI">ActivaI</option>
+          <option value="Aviator">Aviator</option>
+          <option value="CBR150R">CBR150R</option>
+          <option value="CBR250R">CBR250R</option>
+          <option value="CBTrigger">CBTrigger</option>
+          <option value="Dio">Dio</option>
+          <option value="Dream Neo">Dream Neo</option>
+          <option value="Dream Yuga">Dream Yuga</option>
+          <option value="Shine">Shine</option>
+          <option value="Unicorn">Unicorn</option>
+        </select>
+		
+		
+		
+		 </td>
+	</tr>
+	<tr>
+	  <td valign="middle" bgcolor="#F3F3F3"> </td>
+	  <td valign="middle" bgcolor="#F3F3F3"><span>Vehicle No.</span></td>
+	  <td valign="top" bgcolor="#F3F3F3">
+		<input type="text" name="mobile" maxlength="10" size="30">	 </td>
+	</tr>
+	<tr>
+	  <td valign="middle"> </td>
+	  <td valign="middle"><span>
+        <label>Service Type</label>
+      </span></td>
+	  <td valign="top">
+		<select name="city">
+          <option value=""></option>
+          <option value="Free Service">Free Service</option>
+          <option value="Paid Service">Paid Service</option>
+        </select>
+		
+		
+		 </td>
+	</tr>
+	<tr>
+	  <td valign="middle" bgcolor="#F3F3F3"> </td>
+	  <td valign="middle" bgcolor="#F3F3F3"><span>
+        <label>Service Center</label>
+      </span></td>
+	  <td valign="middle" bgcolor="#F3F3F3">
+		<select name="date">
+          <option value=""></option>
+          <option value="Dapodi">Dapodi</option>
+          <option value="Chakan">Chakan</option>
+          <option value="Lonavala">Lonavala</option>
+        </select>
+		
+		    </td>
+	</tr>
+	<tr>
+	  <td valign="middle"> </td>
+	  <td valign="middle"><span>Service Date </span></td>
+	  <td valign="top"><input type="date" name="photos" maxlength="20" size="30"></td>
+	  </tr>
+	<tr>
+	  <td height="38" valign="middle" bgcolor="#F3F3F3"> </td>
+	  <td valign="middle" bgcolor="#F3F3F3">City</td>
+	  <td valign="top" bgcolor="#F3F3F3"><input type="text" name="budget" maxlength="20" size="30"></td>
+	  </tr>
+	<tr>
+	  <td valign="middle"> </td>
+	  <td valign="middle">Select date and then select the avaliable <br>
+	    time slot to drop your vechile for servicing.</td>
+	  <td valign="top"><table width="100%" height="57" border="1" cellpadding="9" cellspacing="0">
+              <tbody><tr>
+                <td width="53%" valign="top">
+					<input type="radio" name="ch" value="08:00am - 08:30am">
+                    <label>08:00am - 08:30am<br>
+                    <input type="radio" name="ch" value="09:00am - 09:30am">
+                      09:00am - 09:30am</label>
+                    <br>
+                    <input type="radio" name="ch" value="10:00am - 10:30am">
+                    <label>10:00am - 10:30am</label>
+                    <br>
+                    <input type="radio" name="ch" value="11:00am - 11:30am">
+                    <label>11:00am - 11:30am</label>
+                    <br>
+                    <input type="radio" name="ch" value="12:00pm - 12:30pm">
+                    <label>12:00pm - 12:30pm</label></td>
+                <td width="47%" valign="top">
+				
+				<input type="radio" name="ch" value="08:30am - 09:00am">
+                    <label>08:30am - 09:00am</label>
+                    <br>
+                    <input type="radio" name="ch" value="09:30am - 10:00am">
+                    <label>09:31am - 10:00am</label>
+                    <br>
+                    <input type="radio" name="ch" value="10:30am - 11:00am">
+                    <label>10:31am - 11:00am</label>
+                    <br>
+                    <input type="radio" name="ch" value="11:30am - 12:00pm">
+                    <label>11:31am - 12:00pm</label>
+                    <br>
+                    <input type="radio" name="ch" value="12:30pm - 01:00pm">
+                    <label>12:31pm - 01:00pm</label></td>
+              </tr>
+            </tbody></table></td>
+	  </tr>
+	<tr>
+	  <td height="32" valign="middle" bgcolor="#F3F3F3"> </td>
+	  <td valign="middle" bgcolor="#F3F3F3"><span>
+	    <label>Mobile No. </label>
+	  </span></td>
+	  <td valign="top" bgcolor="#F3F3F3">
+		<input name="comments" type="text" value="" size="25" maxlength="10">	</td>
+	</tr>
+	<tr>
+	 <td colspan="3" style="text-align:center">
+		  <input type="submit" value="Submit">
+		  <input type="reset" name="reset" value="Reset">	 </td>
+	</tr>
+	<tr>
+	  <td colspan="3" style="text-align:center"><div align="right"></div></td>
+	  </tr>
+	</tbody></table>
+	</form></td>
+  </tr>
+</tbody></table>
+    </div>
+    <div id="page_bottom"></div>
+  </div>
+  <div id="g_navcontainer">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+</div>
+<!-- END PAGE SOURCE -->
+<div align=center></div>
+</body>
+</html>

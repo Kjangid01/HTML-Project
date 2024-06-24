@@ -1,15 +1,26 @@
 <head>
  <style>
     p {
-    color:#5a5f08;
+    color:hsl(267, 26%, 7%);
     font-size: 30;
     padding: 23px 18px;
     margin: 2px;
     border: 5px solid #b04705;
-    background-image:url(pin.jpg);
+    background-image:url(images/download.jpg);
     background-attachment:local;
-    background-size: 100% 100%;
+    background-repeat:repeat-y;
+    
      }
+     body {
+        background-image:url(images/download.jpg);
+        background-repeat:repeat-y;
+        background-position:right;
+     }
+    #image {
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:local;
+    }
     h3 {
     border:5px solid rgb(161, 9, 148);
     padding: 4px;
@@ -23,7 +34,7 @@
     a:link {
         color: #037a25;
         background-color: antiquewhite;
-        border: 2px with #037a25;
+        border: 2px dotted #037a25;
         font-size: 30;
         
         display: inline;
@@ -44,14 +55,15 @@
     </style>
     <!--<link rel="stylesheet" href="style.css"> -->
     <title>css</title>
-    <link rel="icon" type="image/x-icon" href="css.png">
+    <link rel="icon" type="image/x-icon" href="images/css.png">
     
 </head>
 <body>
     <h3 >Use CSS to make a yellow, 1 pixel thick, border around all paragraphs by internal method.</h3>
     <p>
         hello! world
-        welcome to the Volyo Sol.
+        welcome to the Volyo Sol. how to show <br>
+        this is the way :-- &lt br &gt
     </p>
     <p> Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.<br>
 
@@ -60,18 +72,18 @@
         The CSS font-family property defines the font to be used.<br>
         
         The CSS font-size property defines the text size to be used.</p>
-        <button onclick="'D:/Kartik/HTML/css.html'">View Page</button>
+        <button onclick="css.html">View Page</button>
         <br><br><hr align="center" size="10" color="black">
         <a href="https://jsdl.in/DT-30TQEW7I" target="_blank" title="Visit KP Furnitrue Webpage">KP Furnitures</a> <--CLick for open link in new tab using blank atribute.<br>
         <a href="https://jsdl.in/DT-30TQEW7I" target="_self" >KP Furnitures</a> <--CLick for open link in same using self atribute.<br>
         <a href="https://jsdl.in/DT-30TQEW7I" target="_parent">KP Furnitures</a> <--CLick for open link in parent frame using parent atribute.<br>
         <a href="https://jsdl.in/DT-30TQEW7I" target="_top">KP Furnitures</a> <--CLick for open link in full body using top atribute.<br>
 
-            <a href="https://www.google.co.in/" ><img src="google.gif" alt="Google.com" ></a> 
+            <a href="https://www.google.co.in/" ><img src="images/google.gif" alt="Google.com" ></a> 
             
             
-            <a href="https://www.freepik.com/photos/nature" ><img src="nature6.jfif" title="nature" alt="nature" ></a>
-            <a href="nature (5).jpg" ><img src="nature (5).jpg" ></a>
+            <a href="https://www.freepik.com/photos/nature" ><img src="images/nature6.jfif" title="nature" alt="nature" ></a>
+            <a href="images/nature (5).jpg" ><img src="images/nature (5).jpg" ></a>
             <a href="mailto:reportfraud@paytmbank.com">Send Mail to Mobikwik</a>
             <br><br>
             <a href="https://youtu.be/gPLrIJgsJlw?si=qhNfFW8OxGlVEqZ7" target="_blank" title="mirzapur s3 trailer">Mirzapur Season3 Trailer</a>
@@ -80,9 +92,9 @@
             <br>
             <br>
             <hr size="10px" width="90%" color="#2514ff">
-            <h3 id="terms"> <a href="nature (2).jpg" ><img src="nature (2).jpg"  style="float: right;width: 60px;height: 60px ;"></a>
+            <h3 id="terms"> <a href="images/nature (2).jpg" ><img src="images/nature (2).jpg"  style="float: right;width: 60px;height: 60px ;"></a>
                 What’s covered in these terms</h3>
-                <p >
+                <p id="image">
 We know it’s tempting to skip these Terms of Service, but it’s important to establish what you can expect from us as you use Google services, and what we expect from you.
 These Terms of Service reflect the way Google’s business works, the laws that apply to our company, and certain things we’ve always believed to be true. As a result, these Terms of Service help define Google’s relationship with you as you interact with our services. For example, these terms include the following topic headings:
 
@@ -104,7 +116,7 @@ organized under the laws of the State of Delaware, USA, and operating under the 
 1600 Amphitheatre Parkway
 Mountain View, California 94043
 USA</p>
-<p id="age" style="background-image: url(nature\ \(2\).jpg); background-size:100% 100%;  background-attachment:local; ">Age requirements
+<p id="age" style="background-image: url(images/nature\ \(2\).jpg); opacity: 0.5;  background-attachment:local; ">Age requirements
 If you’re under the age required to manage your own Google Account, you must have your parent or legal guardian’s permission to use a Google Account. Please have your parent or legal guardian read these terms with you.
 
 If you’re a parent or legal guardian, and you allow your child to use the services, then these terms apply to you and you’re responsible for your child’s activity on the services.
@@ -228,8 +240,8 @@ Using Google servic
             <a href="#age">Go to age</a><br>
             <br>
             <br>
-            <input type="button" onclick="first.html" value="close"><br>
-            <button onclick="window.close()" value="CLose">Close</button>
+            <input type="submit" onclick="window.close()" value="close"><br>
+            <button onclick="document.close()" value="CLose">Close</button>
 
 
 
