@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Image Hover</title>
+        <style>
+            div.image {
+                position: relative;
+                width:23%;
+                float: left;
+                margin:15px;
+                
+
+            }
+            img {
+                
+                height:500px;
+                width:100%;
+               
+                
+            }
+            div.text {
+                position:absolute;
+                bottom: 0;
+                left: 0em;
+                margin: auto;
+                opacity:0.0;
+               
+                color:rgb(11, 29, 149);
+            }
+             .image:hover .text{
+                opacity: 1;
+             }
+             .image:hover {
+                opacity: 0.8;
+                box-shadow:0px 0px 15px rgb(24, 62, 177);
+             }
+        </style>
+    </head>
+    <body>
+       <div class="image"><img src="Responsive/hathni.webp" title="Hathni Kund" alt="hatni Kund" /> <div class="text"><h2>Hathni Kund Waterfall</h2> </div></div>
+       <div class="image"><img src="Responsive/maleshwar.webp" title="Hathni Kund" alt="maleshwar"/> <div class="text"><h2>Maleshwar Waterfall</h2> </div></div>
+       <div class="image"><img src="Responsive/damoh.png" title="Hathni Kund" alt="domah" /> <div class="text"><h2>Domoh Waterfall</h2> </div></div>
+       <div class="image"><img src="Responsive/bundi.jfif" title="Hathni Kund" alt="Bundi"/> <div class="text"><h2>Bundi Waterfall</h2> </div></div>
+    </body>
+</html>

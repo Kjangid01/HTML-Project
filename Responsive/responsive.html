@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Jaipur Waterfalls</title>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+        <style>
+            * {   box-sizing:border-box;   }
+            body {
+                text-align: center;
+            }
+
+            .header {
+                background-color:rgb(20, 218, 96);
+                text-align: center;
+                padding:15px; 
+                     }
+
+            .footer {
+                background-color:rgba(3, 140, 56, 0.3);
+                text-align: center;
+                padding:15px;
+                
+                       }
+            
+            .menu {
+                background-color: rgba(5, 91, 102, 0.8);
+                margin-top:5px;
+                 }
+
+            ul {
+                list-style-type:none; 
+                font-size:x-large;
+                text-align:center;
+                margin:auto; }
+
+            li {   
+                display:inline;
+                padding:10px;       }
+
+            div.row {
+                
+                background: rgba(244, 245, 246, 0.2);  
+                height: 530px;                     
+                 }
+           
+            div.image {
+                position: relative;
+                width:23%;               
+                float:left;
+                margin:10px;
+            }
+
+            img {
+                width:100%;
+                height:500px;               
+                opacity:1.0;
+                border-radius: 10px 0px;
+            }
+            
+            div.text {
+                position:absolute;
+                bottom: 0;
+                left: 0.2em;
+                margin: auto;
+                opacity:0.0;               
+                color:rgb(11, 29, 149);
+            }
+            
+            .image:hover {
+                opacity:0.9;
+                box-shadow:1px 1px 5px black, -1px 0 5px rgb(0, 64, 255);
+            }
+
+            .image:hover .text{
+                opacity:1;
+            }
+             
+
+            .row::after {
+                content:"";
+                clear:both;
+                display:table;
+            }
+            
+            
+           
+            
+            @media only screen and (max-width:368px) {
+                div.image {
+                    width:95%;
+                }
+                .head {
+                    font-size:small;
+                    padding:auto;
+                }
+                ul {
+                    font-size: small;
+                }
+                li {
+                    display: block;
+                    overflow: scroll;
+                }
+                .footer {
+                    padding:5px;
+                    font-size: smaller;
+                }
+            }
+
+            @media only screen and (max-width:778px) and (min-width:369px) {
+                div.image {
+                    width:47%;
+                }
+                .head {
+                    font-size:large;
+                    padding:auto;
+                }
+                ul {
+                    font-size: large;
+                }
+                li {
+                    display: inline-block;
+                    overflow: scroll;
+                }
+                .footer {
+                    padding:5px;
+                    font-size: large;
+                }
+            }
+                    
+           
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1  class="head">Jaipur Waterfalls</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Jaipur</li>
+                <li>Uaipur</li>
+                <li>Chhitorgarh</li>
+                <li>Kota</li>
+                <li>Karoli</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="image"><img src="bundi.jfif" title="Bundi Waterfall"/> <div class="text">  <h2>Buni Waterfall</h2></div>  </div>
+            <div class="image"><img src="hathni.webp"/> <div class="text"> <h2>Hathni kund Waterfall</h2> </div> </div>
+            <div class="image"><img src="maleshwar.webp" /> <div class="text"> <h2>Maleshwar Dham Waterfall</h2> </div></div>
+            <div class="image"><img src="damoh.png" />  <div class="text"><h2>Damoh Waterfall</h2> </div> </div>
+        </div>
+        <div class="footer">
+            <h3>Thank You </h3>
+        </div>
+    </body>
+</html>
